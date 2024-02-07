@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <script src="../javascript/index.js"></script>  
+    <script src="../javascript/classes.js"></script> 
+    <title>Classi della 5E</title>
+</head>
+    <body>
+        <!--Popup fullscreen che contiene  le voci di menù della navabar una volta raggiunto il @media-breakpoint stabilito, viene gestito da un evento "click" in Javascript   -->
+        <div class="popup">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="article1.html">News</a>
+                <a href="https://www.dndbeyond.com/sources/phb" target="_blank">Regolamenti</a>
+                <a href="../html/classes.html">D&D</a>
+            </ul>
+            <a href="javascript:void(0)" class="closepopup">X</a>
+        </div>
+
+        <!--Popup di ricerca fullscreen gestito da un evento "click" in Javascript, contiene un form di prova (nessuna action) che dovrebbe implementare diverse chiamate GET paramentriche in base al contenuto gestito nell'input della form -->    
+        <div class="ricerca">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Drago rosso adulto, palla di fuoco, etc..">
+                <button type="submit" class="btn btn-primary mb-2">Cerca</button>
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="closericerca">X</a>
+        </div>
+
+
+        <!--Div container di bootstrap che contiene il menù di navigazione <nav> che a sua volta contiene dei link agli articoli o nel caso di Cerca ad una funzione che mostra un popup di ricerca in fullscreen
+        Il nav è a sua volta responsive grazie alle istruzioni CSS che raggiunta una determinata larghezza fanno sparire le voci e fanno apparire una miniatura del logo al centro,
+        un menù ad "hamburger sulla sinistra" ed il cerca sulla destra sottoforma di immagine (sprite cliccabile) -->
+        <div class="container">
+
+            <nav>
+                <i alt="menu-dropdwon" class="menu-dropdown"></i>
+                <a href="../html/index.html">Home</a>
+                <a href="../html/article1.html">News</a>
+                <i alt="logo mimic etc." class="logo-mimicetc"></i>
+                <a href="https://www.dndbeyond.com/sources/phb">Regolamenti</a>
+                <a href="../html/classes.html">D&D</a>
+                <i alt="logo ricerca" class="logo-ricerca"></i>
+                <a href="javascript:void(0)" class="ricerca-normale">Cerca</a>
+            </nav>
+
+
+            <!--Banner principale della pagina con il titolo che si modifica in base alla larghezza del dispositivo, arrivati ad un determinato breakpoint soprassiede una @media and screen che disabilita l'h1 e mostra invece un h2 con un titolo più breve-->
+            <header>
+                <a href="../html/index.html">
+                    <img src="../images/mimicetclogo.png" alt="logo mimicetc">
+                </a>
+                <h1>Mimic, goblin e altre creature fraintese</h1>
+                <h2 class="title-responsive">Mimic etc.</h2>
+            </header>
+
+            <article>
+                <h2>Classi D&D 5E (Manuale base)</h2>
+            </article>
+            
+            <!--Html di prova per popolare una table con delle chiamate GET fatte ad un'API gratuita, gestito da una fetch() in Javascript -->
+            
+                <table class="table table-dark">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Classi</th>
+                        <th scope="col">Manuale</th>
+                    </tr>
+                    </thead>
+                    <tbody class="riga">
+
+                    </tbody>
+                </table>
+
+                <!--Table con le specifiche della classe selezionata -->
+                <div class="class-specs">
+                            <table class="table table-dark ">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Classe</th>
+                                            <th scope="col">Dado vita</th>
+                                            <th scope="col">Competenze TS</th>
+                                            <th scope="col">Sottoclasse</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="riga-classe">
+                    
+                                    </tbody>
+                            </table>
+
+                            <table class="table table-dark">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Equipaggiamento di partenza</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody class="riga-equip">
+                
+                                </tbody>
+                        </table>
+                </div>
+               
+                
+            
+        </div>
+
+        <!--Footer con dentro il logo, e 3 immagini che corrispondo a link cliccabili per i social-->
+        <footer>
+            <span>© 2024 Mimicetc.</span>
+            <i alt="immagine home" class="logo-home-footer"></i>
+            <div class="social">
+               <a href="https://www.instagram.com/mimic.etc/" target="_blank"><img src="../images/socials.png" alt="logo Facebook" class="Facebook"></a> 
+               <a href="https://twitter.com/?lang=it" target="_blank"><img src="../images/socials.png" alt="logo X" class="X"></a> 
+               <a href="https://www.facebook.com/?locale=it_IT" target="_blank"><img src="../images/socials.png" alt="logo Instagram" class="Instagram"></a> 
+            </div>
+        </footer>
+    </body>
+</html>
